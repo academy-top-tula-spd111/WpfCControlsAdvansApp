@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfCControlsAdvansApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCControlsAdvansApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Slider Orientation="Horizontal"
+                TickPlacement="BottomRight"
+                TickFrequency="1"
+                Minimum="0"
+                Maximum="50"
+                SelectionStart="0"
+                SelectionEnd="0"
+                IsSelectionRangeEnabled="True"
+                Value="10" ValueChanged="Slider_ValueChanged"></Slider>
+        <ProgressBar Height="30"
+                     Minimum="0"
+                     Maximum="100"
+                     Value="0"
+                     x:Name="progress"></ProgressBar>
+        <Button Click="Button_Click">Click me</Button>
+        <Calendar x:Name="calendar"
+                  SelectionMode="MultipleRange"
+                  
+                  IsTodayHighlighted="True"
+                  DisplayMode="Month">
+        </Calendar>
+        <DatePicker Width="200"
+                    SelectedDateFormat="Long">
+        </DatePicker>
+        <StackPanel Width="200" Height="100">
+            <Image Source="/icon1.png" Stretch="None"  />
+        </StackPanel>
+    </StackPanel>
+</Window>
